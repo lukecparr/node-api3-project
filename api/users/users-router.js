@@ -51,7 +51,7 @@ router.get('/:id/posts', validateUserId, (req, res) => {
 router.post('/:id/posts', validateUserId, validatePost, (req, res) => {
 
   Posts.insert(req.body)
-    .then((data) => res.status(200).json(req.user))
+    .then((data) => res.status(200).json(data))
     .catch(() => serverError)
 });
 
