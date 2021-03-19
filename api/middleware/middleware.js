@@ -36,7 +36,7 @@ function validateUser(req, res, next) {
   } else {
     next();
   }
-};
+}
 
 function validatePost(req, res, next) {
   // DO YOUR MAGIC
@@ -48,11 +48,11 @@ function validatePost(req, res, next) {
   } else {
     next();
   }
-};
+}
 
 function serverError(req, res, next) {
   res.status(500).json({ message: "Server error" })
-};
+}
 
 // do not forget to expose these functions to other modules
 
